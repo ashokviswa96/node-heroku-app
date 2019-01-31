@@ -1,7 +1,7 @@
 let express = require("express");
 let fs = require("fs");
 let app = express();
-let port = process.env.port || 3000;
+let port = process.env.PORT || 3000;
 console.log(process.env.port,process.env.PORT);
 app.use((req, res, next) => {
     fs.appendFile("ServerLogs.txt", req.url,(err)=>{
